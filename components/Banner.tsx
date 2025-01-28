@@ -2,8 +2,11 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const Banner: React.FC<{}> = () => {
+  const router = useRouter();
   return (
     <div className='flex flex-row items-center justify-center px-20 mt-[100px] z-[20] '>
       <div className='flex flex-col  justify-center  text-center'>
@@ -40,12 +43,13 @@ const Banner: React.FC<{}> = () => {
           dedicated to crafting elegant and user-friendly web applications.
         </p>
         <div className='text-md flex justify-center'>
-          <button
-            onClick={() => window.open('mailto:korolevmaks294@gmail.com')}
-            className=' z-[1]     padding-20  hover:bg-white rounded-3xl  text-white font-semibold hover:text-black py-3 px-10  border-[0.1px] border-white hover:border-transparent '
+          <Link
+            href={'https://t.me/OrchidClouse'}
+            target='_blank'
+            className=' z-[1] padding-20  hover:bg-white rounded-3xl  text-white font-semibold hover:text-black py-3 px-10  border-[0.1px] border-white hover:border-transparent '
           >
             Contact Me
-          </button>
+          </Link>
         </div>
       </div>
     </div>

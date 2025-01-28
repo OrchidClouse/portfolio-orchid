@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar: React.FC<{}> = () => {
@@ -17,18 +18,17 @@ const Navbar: React.FC<{}> = () => {
             alt='Maksim Korolev - Developer'
             width={81}
             height={64}
-            // sizes='100vw'
-            // className='w-full h-auto'
           />
         </a>
 
         <div className='flex flex-row gap-5'>
-          <div
-            onClick={() => window.open('mailto:korolevmaks294@gmail.com')}
+          <Link
+            href={'https://t.me/OrchidClouse'}
+            target='_blank'
             className=' z-[1] bg-transparent  padding-10 cursor-pointer bg-black hover:bg-[#2E2E2E] rounded-xl  text-white  py-2 px-5'
           >
             Contact
-          </div>
+          </Link>
         </div>
       </div>
     </div>
